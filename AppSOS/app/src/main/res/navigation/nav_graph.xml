@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.appsos.main.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.appsos.main.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_addNumberPhone"
+            app:destination="@id/addNumberPhone" />
+        <action
+            android:id="@+id/action_SecondFragment_to_callPhone"
+            app:destination="@id/callPhone" />
+        <action
+            android:id="@+id/action_SecondFragment_to_aid"
+            app:destination="@id/aid" />
+        <action
+            android:id="@+id/action_SecondFragment_to_tutorial"
+            app:destination="@id/tutorial" />
+        <action
+            android:id="@+id/action_SecondFragment_to_skill"
+            app:destination="@id/skill" />
+        <action
+            android:id="@+id/action_SecondFragment_to_googleMap"
+            app:destination="@id/googleMap" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNumberPhone"
+        android:name="com.example.appsos.fragmentOfLearn.AddNumberPhone"
+        android:label="fragment_add_number_phone"
+        tools:layout="@layout/fragment_add_number_phone" />
+    <fragment
+        android:id="@+id/aid"
+        android:name="com.example.appsos.fragmentOfLearn.Aid"
+        android:label="fragment_aid"
+        tools:layout="@layout/fragment_aid" />
+    <fragment
+        android:id="@+id/callPhone"
+        android:name="com.example.appsos.fragmentOfLearn.CallPhone"
+        android:label="fragment_call_phone"
+        tools:layout="@layout/fragment_call_phone" />
+    <fragment
+        android:id="@+id/skill"
+        android:name="com.example.appsos.fragmentOfLearn.Skill"
+        android:label="fragment_skill"
+        tools:layout="@layout/fragment_skill" />
+    <fragment
+        android:id="@+id/tutorial"
+        android:name="com.example.appsos.fragmentOfLearn.Tutorial"
+        android:label="fragment_tutorial"
+        tools:layout="@layout/fragment_tutorial" />
+    <fragment
+        android:id="@+id/googleMap"
+        android:name="com.example.appsos.fragmentOfLearn.GoogleMap"
+        android:label="fragment_google_map"
+        tools:layout="@layout/fragment_google_map" />
+</navigation>
